@@ -10,7 +10,7 @@ by adding `textlocal_elixir` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:textlocal_elixir, "~> 0.1.0"}
+    {:textlocal_elixir, git: "https://github.com/yugandharc9/textlocal_elixir"},
   ]
 end
 ```
