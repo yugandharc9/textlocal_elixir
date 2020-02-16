@@ -1,6 +1,6 @@
 # TextlocalElixir
 
-**TODO: Add description**
+**This is elixir application to send SMS using https://www.textlocal.in/**
 
 ## Installation
 
