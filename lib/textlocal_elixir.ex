@@ -14,6 +14,8 @@ defmodule TextlocalElixir do
   """
   @app :textlocal_elixir
   @send_url "https://api.textlocal.in/send/?"
+  @shortener_url "https://api.textlocal.in/create_shorturl/?"
+
 
   def send_message(number,text) do
       api_key = Application.get_env(@app, :api_key)
@@ -25,4 +27,11 @@ defmodule TextlocalElixir do
       HTTPoison.get(@send_url<> body)
   end
 
+  def shorten_url(url) do
+      api_key = Application.get_env(@app, :api_key)
+      body = URI.encode_query(%{
+        "apikey" => api_key, "url" => url
+      })
+      HTTPoison.get(@shortener_url<> body)
+  end
 end
